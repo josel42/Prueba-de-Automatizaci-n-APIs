@@ -1,0 +1,14 @@
+[
+  {
+    "id": 77777,
+    "name": "Gordo",
+    "category": "Perro",
+    "status": "available"
+  },
+  {
+    "id": 55559,
+    "name": "Zeus",
+    "category": "Perro",
+    "status": "available"
+  }
+]

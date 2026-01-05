@@ -1,0 +1,25 @@
+Se implementaron pruebas REST con Karate para validar operaciones criticas de la API PetStore:
+alta de mascota, consulta por ID, actualizacion de nombre y estatus a "sold", y consulta
+por estatus. Se utilizo un archivo externo de datos para la creacion inicial.
+*************
+Hallazgos y validaciones clave:
+1) Alta de mascota:
+- Se confirmo que el endpoint POST /pet acepta los datos y retorna 200.
+- Se valido que el id de respuesta coincida con el id enviado.
+*************
+2) Consulta por ID:
+- Se valido que GET /pet/{id} responde 200 para una mascota creada.
+- Se verifico consistencia basica del id retornado.
+*************
+3) Actualizacion de mascota:
+- Se actualizo el nombre y el estatus a "sold" mediante PUT /pet.
+- Se verifico en respuesta que los cambios quedaron persistidos.
+*************
+4) Consulta por estatus:
+- Se ejecuto GET /pet/findByStatus?status=sold.
+- Se verifico que los elementos retornados contengan status "sold".
+*************
+Recomendaciones de mejora:
+- Agregar escenarios negativos (ID inexistente, payload invalido).
+- Asegurar limpieza de datos o usar ids unicos por ejecucion para evitar colisiones.
+- Validar campos adicionales en respuestas (name, status, category).
